@@ -52,6 +52,21 @@ user["location"] = "Bangalore"
 print(user)
 
 
+################################# Shallow copy vs Deep copy #################################
+import copy
+
+original = {
+    "model": "gpt-model",
+    "settings": {
+        "temperature": 0.7
+    }
+}
+
+shallow = original.copy()
+deep = copy.deepcopy(original)
+
+shallow["settings"]["temperature"] = 0.2
+deep["settings"]["temperature"] = 0.5
 
 
 
